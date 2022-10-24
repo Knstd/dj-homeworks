@@ -1,4 +1,4 @@
-"""recipes URL Configuration
+"""recipes_app URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.2/topics/http/urls/
@@ -16,6 +16,9 @@ Including another URLconf
 
 from django.urls import path
 
+from recipes.calculator.views import dish_list
+
 urlpatterns = [
+    path('<dish>/', dish_list, name='dish')
     # здесь зарегистрируйте вашу view-функцию
 ]
